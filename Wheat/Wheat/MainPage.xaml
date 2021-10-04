@@ -16,7 +16,7 @@
         <Grid x:Name="startPage" BackgroundColor="WhiteSmoke">
             <Button x:Name="buttonGetMeal" Margin="-30" BackgroundColor="WhiteSmoke" Clicked="ChangePage"/>
             <Label x:Name="labelWelcome" Text="Wheat?" WidthRequest="360" FontSize="27"
-                   Margin="30" HorizontalTextAlignment="Center" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+                   Margin="30" HorizontalTextAlignment="Center" VerticalOptions="CenterAndExpand" HorizontalOptions="Center"/>
         </Grid>
     </Grid>
 </ContentPage>
