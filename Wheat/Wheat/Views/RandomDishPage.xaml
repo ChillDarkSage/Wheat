@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:converter="clr-namespace:Wheat.Converter" xmlns:cb="clr-namespace:ButtonCircle.FormsPlugin.Abstractions;assembly=ButtonCircle.FormsPlugin.Abstractions"
+             x:Class="Wheat.Views.RandomDishPage">
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="FontFamily" Value="MicrosoftJhenghei"/>
+            <Setter Property="FontSize" Value="21"/>
+            <Setter Property="HorizontalTextAlignment" Value="Center"/>
+            <Setter Property="TextColor" Value="Black"/>
+        </Style>
+        <converter:DishesToStringDescription x:Key="dtsd"/>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid BackgroundColor="WhiteSmoke">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" WidthRequest="360" Margin="30" Text="{Binding Dishes,Converter={StaticResource dtsd}}" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand"/>
+            <Label Grid.Row="1" WidthRequest="360" Margin="30" Text="请用吧, 旅者阁下." HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand"/>
+            <cb:CircleButton Grid.Row="1"
+                FontIcon="Ionicons" Icon="menu"
+                FontSize="45" TextColor="Black" 
+                WidthRequest="70" HeightRequest="70" Margin="25"
+                BorderThickness="3" BorderColor="Silver"
+                Opacity="0.7" HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand"
+                BackgroundColor="DarkGray" Clicked="ChangePage">
+            </cb:CircleButton>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

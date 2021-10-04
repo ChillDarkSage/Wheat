@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Wheat.MainPage"
+             Title="Wheat">
+
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="FontFamily" Value="MicrosoftJhenghei"/>
+            <Setter Property="FontSize" Value="{TemplateBinding}"/>
+            <Setter Property="TextColor" Value="Black"/>
+        </Style>
+    </ContentPage.Resources>
+
+    <Grid>
+        <Grid x:Name="startPage" BackgroundColor="WhiteSmoke">
+            <Button x:Name="buttonGetMeal" Margin="-30" BackgroundColor="WhiteSmoke" Clicked="ChangePage"/>
+            <Label x:Name="labelWelcome" Text="Wheat?" WidthRequest="360" FontSize="27"
+                   Margin="30" HorizontalTextAlignment="Center" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+        </Grid>
+    </Grid>
+</ContentPage>
